@@ -1,10 +1,10 @@
 const parent = React.createElement(
     "div",
     {id:"parent"}, 
-    React.createElement("div",{id:"child"},[
+    React.createElement("div",{id:"child"},[        //use array for sibling tag
 
     React.createElement("h1",{id:"new tag"}, "Nested tag"),    //for children tags just give another create ele statement in last parameter 
-    React.createElement("h2",{id:"new tag"}, "children tag")
+    React.createElement("h2",{id:"new tag"}, "sibling tag")   
     ])
 );
 
