@@ -9,24 +9,25 @@ const heading= <h1>Namaste REACT 🚀</h1>;
 
 // react element ----- starts with lower case letters
              //------- for single line use "parenthesis"
-             //--------for double line or when return is der use "flower brackets" 
-const heading1=()=>(
-     <h1>
-        This is react element.
-    </h1>
+             //--------for double line use return is der and use "flower brackets" 
+const headingg=(
+ <h1>  This is react element.</h1>
 );
+
 
 
 /*
 react component
-to render use </>
+ ------- for single line use "parenthesis"
+ --------for double line use return is der and use "flower brackets" 
+to render use "</>"
 */
 const Component1=()=>(
      <h1  className='headd'>This is react component 1 </h1>
 );
 
 // with flower brackets and /*component composition*/
-const Component2=()=>{ 
+const Component2=()=>{
     return(
    <div>
    <Component1/>  
@@ -34,9 +35,10 @@ const Component2=()=>{
    <h1>React  is awesome!🚀 </h1>
    </div>
     );
+    
 };
 
 
 const root=ReactDOM.createRoot(document.getElementById('root'));
-    root.render(<Component2/>);
-    
+    // root.render(<Component2/>);
+    root.render(headingg);
