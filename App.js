@@ -26,11 +26,14 @@ const Component1=()=>(
      <h1  className='headd'>This is react component 1 </h1>
 );
 
+const data="300"; // if any infected API call is stored in data then when its put in component , JSX will take care of that and provies secuirity. 
+
 // with flower brackets and /*component composition*/
 const Component2=()=>{
     return(
    <div>
    <Component1/>  
+   {data}
    <h1  className='headd'>This is react component 2</h1> 
    <h1>React  is awesome!🚀 </h1>
    </div>
@@ -40,5 +43,5 @@ const Component2=()=>{
 
 
 const root=ReactDOM.createRoot(document.getElementById('root'));
-    // root.render(<Component2/>);
-    root.render(headingg);
+    root.render(<Component2/>);
+    
