@@ -32,7 +32,9 @@ const data="300"; // if any infected API call is stored in data then when its pu
 const Component2=()=>{
     return(
    <div>
-   <Component1/>  
+   <Component1/> 
+   {Component1()} /* calling the function */
+   <Component1/><Component1/>
    {data}
    <h1  className='headd'>This is react component 2</h1> 
    <h1>React  is awesome!🚀 </h1>
