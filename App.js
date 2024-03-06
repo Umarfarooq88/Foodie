@@ -1,22 +1,42 @@
 import React from 'react';
 import ReactDOM  from 'react-dom';
 
-const parent = React.createElement(
-    "div",
-    {id:"parent"}, 
-    React.createElement("div",{id:"child"},[        //use array for sibling tag
+//JSX
+const heading= <h1>Namaste REACT 🚀</h1>;
+// the above JSX is transcompiled to React.createElement and the to HTML Element and then it is rendered in the browser using BABEL.
+// JSX=> REact eElement => HTML Element
 
-    React.createElement("h1",{id:"new tag"}, "Nested ///////tag"),    //for children tags just give another create ele statement in last parameter 
-    React.createElement("h2",{id:"new tag"}, "sibling tag")   
-    ])
+
+// react element ----- starts with lower case letters
+             //------- for single line use "parenthesis"
+             //--------for double line or when return is der use "flower brackets" 
+const heading1=()=>(
+     <h1>
+        This is react element.
+    </h1>
 );
 
 
+/*
+react component
+to render use </>
+*/
+const Component1=()=>(
+     <h1  className='headd'>This is react component 1 </h1>
+);
 
-// const heading = React.createElement
-// ("h1",
-// {id:"heading"},
-// "Learning React");             //heading returns a object and still its not a h1 tag.
-        const root = ReactDOM.createRoot(document.getElementById("root"));
+// with flower brackets and /*component composition*/
+const Component2=()=>{ 
+    return(
+   <div>
+   <Component1/>  
+   <h1  className='headd'>This is react component 2</h1> 
+   <h1>React  is awesome!🚀 </h1>
+   </div>
+    );
+};
 
-        root.render(parent);// this statement renders the object and thn makes it as a h1 tag and show it in the browser.
+
+const root=ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<Component2/>);
+    
