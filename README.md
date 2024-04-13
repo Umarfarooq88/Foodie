@@ -1,2 +1,2 @@
 # Foodie
-Restraunt web app in REACT
+Restauraunt web app in REACT
